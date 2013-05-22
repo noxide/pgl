@@ -16,6 +16,7 @@
 		display: none;
 		top: 0;
 		left: 0; 
+		border: 1px solid black;
 		}
 	
 	.reveal-modal {
@@ -24,7 +25,7 @@
 		left: 50%;
 		margin-left: -250px;
 		width: 400px;
-		background: #eee url(..images/modal-gloss.png) no-repeat -200px -80px;
+		background: #eee url(../images/modal-gloss.png) no-repeat -200px -80px;
 		position: absolute;
 		z-index: 101;
 		padding: 30px 40px 34px;
@@ -34,6 +35,7 @@
 		-moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
 		-webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
 		-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		
 		}
 		
 	.reveal-modal.small 		{ width: 200px; margin-left: -140px;}
@@ -47,11 +49,18 @@
 		position: absolute;
 		top: 8px;
 		right: 11px;
-		color: #aaa;
+		color: #000;
 		text-shadow: 0 -1px 1px rbga(0,0,0,.6);
 		font-weight: bold;
 		cursor: pointer;
+		border: 1px solid black;
 		} 
+		
+	#poplist h1 {
+		color: #000;
+	}
+	
+	
 	/*
 		
 
@@ -103,6 +112,26 @@ this element is the one that *you* will style the most.
     border:2px solid #000;
     position:relative;
     cursor:default;
+}
+
+
+/* Addtl Styling */
+
+input[type="checkbox"] {
+	display:inline-block;
+}
+
+input[type="checkbox"] + label {
+
+ 
+	
+	
+}
+
+header h4 {
+	
+color: #FFF;
+	
 }
 
 
