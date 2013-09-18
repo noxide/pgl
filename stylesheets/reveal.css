@@ -60,9 +60,34 @@
 		color: #000;
 	}
 	
+	#pop-priv h1{
+		color: #000;	
+	}
+	
+	#pop-contact h1{
+		color: #000;	
+	}
+	
+	#pop-abt h1{
+		
+		color: #000;	
+	}
+	#pop-social h1{
+		
+		color: #000;	
+	}
+	
+	.icon {
+
+	width: 55px !important;
+    height: 55px !important;	
+		
+	}
+	/*
 	
 	/*
 		
+			
 
 /*SCROLLING CSS */
 
@@ -82,7 +107,7 @@ element stays still.
   position:relative;
   overflow:hidden;
   width: 600px;
-  height: 175px;
+  height: 225px;
 }
  
 /*
@@ -132,6 +157,16 @@ header h4 {
 	
 color: #FFF;
 	
+}
+
+.thank_you {
+	background: #9F6;
+	width: 300px;
+	height: 200px;
+	border-radius: 8px;
+	border-bottom-right-radius:8px;
+
+
 }
 
 

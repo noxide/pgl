@@ -16,13 +16,12 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
 	<script type="text/javascript" src="js/jquery.reveal.js"></script>
   	<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
-	<!-- Stylesheets -->
-	    <link rel="stylesheet" href="stylesheets/reveal.css">
-
+	
+    <!-- Stylesheets -->
+    
+	<link rel="stylesheet" href="stylesheets/reveal.css">
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css" media="screen">
-	
-	<!-- Change to a different theme/sub-theme here -->
 	<link rel="stylesheet" href="stylesheets/sub-theme-dark.css" type="text/css" media="screen">
 
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -33,20 +32,84 @@
 </head>
 
 <body>
-
 	<header>
-
 		<nav>
 			<div class="container">
 					<a href="#" class="brand">The Public Gaming League</a>
 			</div>
 		</nav>
-
-		<section class="container">
+  
+  		<section class="container">
 			
             
 			<h1>Signup for the Public Gaming League!</h1>
 			<h2>Mature, Competitive Gaming, on your schedule</h2>
+              
+            	<!--Popups-->
+            		<div id="poplist" class="reveal-modal">
+                        <h1>Current PGL Games</h1>
+                            <ul style="text-align:left";>
+                                <li>League of Legends</li>
+                                <li>Dota 2</li>        
+                                <li>Counter Strike</li>
+                            </ul>
+            	   		<a class="close-reveal-modal">&#215;</a>
+                     </div>
+                     
+                     
+                    <div id="pop-social" class="reveal-modal">
+                    <h1> Social Media </h1>
+                    	<p> 
+	                    <a href="https://www.facebook.com/pages/Public-Gaming-League/162839160579178"> <img src="./images/facebook.png" class="icon"> </a> 
+                    	<a href="https://twitter.com/NizoxPGL"> <img src="./images/twitter.png" class="icon"> 
+                        <a href="http://www.youtube.com/channel/UCwnPdIHpxhKcdau0sc-spDw"> <img src="./images/youtube.png" class="icon"> 
+                        <a href="https://plus.google.com/u/0/b/113962846282394412343/113962846282394412343/posts"> <img src="./images/google.png" class="icon"></a>
+                    	</p>
+    	   	   		<a class="close-reveal-modal">&#215;</a>
+
+					</div>
+                     
+                     
+                     <div id="pop-abt" class="reveal-modal large">
+                        <h1>About the PGL</h1>
+                     	<p style="text-align:left";> We at PGL have been gamers all our life, but we have finally hit the point where there is just very little time 
+                        in the day for gaming. The PGL was born out of necessity for people who want to game at a competitive level, but cannot meet the rigorous 
+                        timetable that most gaming leagues require.  </p>
+                        <p>By scheduling gaming on a weekly basis, people can deconfict their gaming around work, spouses, children and other hobbies.</p>
+                        <p> We love to game, but as we grew older, we lost the group of friends that we played with, and finding new ones is nearly impossible. At 
+                        the PGL we help provide the team, and the league so that everyone can play in a friendly competitive environment. </p>
+                     <a class="close-reveal-modal">&#215;</a>
+                     </div>
+                     
+                     <div id="pop-priv" class="reveal-modal">
+                        <h1>Privacy</h1>
+	                     	<p style="text-align:left";> The PGL will never share any information, to include your e-mail address, name, dates, times, traffic 
+                            data or any personally identifiable information  with any sources. </p>
+                     <a class="close-reveal-modal">&#215;</a>
+                     </div>
+                     
+                                         
+                     <div id="pop-contact" class="reveal-modal">
+                     <form>
+                            <h1>Contact Us</h1>
+                            
+                            <p> How can we reach you?</p>
+                            <p> <input type="text" value="E-Mail" /> </p>
+                            <p> What would you like to say? </p>
+                            <p> <input type="text" class="contact_us_box" style="height: 55px; width: 300px; font-size:14px; text-align:left; text-wrap:normal;" /> </p>
+                            <p> <button type="button" class="btn btn-gold">Submit</button></p>
+                            <a class="close-reveal-modal">&#215;</a>
+                            </form> 
+                      </div>
+				
+                     
+<!--End Footer Popups-->
+
+<!--Team Registration Popup?-->                     
+
+
+
+
 
 <!--SINGUP FORM -->
 		<div class="form_container">
@@ -56,27 +119,65 @@
 			<div class="scrollable" id="scrollable">
             	<div class="items">
             <div>
-				<p><input type="email" placeholder="Enter Email" required>
-				<button type="button" class="btn btn-gold next" class="next">Signup for the Beta!</button></p>
+				<button type="button" class="btn btn-gold next" class="next">Signup for the Beta!</button>
 			</div>                
             
+            <div> 
+            	<p> <button type="button" class="btn btn-gold next"> Register as a player </button> </p>
+                <p> Or </p>
+	        	<p> <a href="#" data-reveal-id="poplist" data-animation="none"> <button type="button" class="btn btn-gold"> Register a team </button> </p> </a>
+            
+            
+            </div>
+            
 			<div>
+
+   				<p><input type="email" placeholder="Enter Email" required></p>
                 <p><input type="text" placeholder="Desired Username"></p>
+                         
                 <p><button type="button" class="btn btn-gold next">Next</button></p>
             </div>
             
             <div>
             	
-                <p><h3>What days and times are you available to play?</h3></p>
+                <p><h3>Choose a game.</h3></p>
+                <p>More games can be added later</p>
 
 
-                <p>**Add Day/Time Picker**</p>   <!-- ADD DATE / TIME PICKER -->
+                <p>	<select id="game">
+                		<option value="Dota2">Dota 2</option>
+                        <option value="LeagueofLegends">League of Legends</option>
+                        <option value="cstrike">Counter Strike</option>
                 
-                
+	                </select>
+                </p> 
+                           
 				                    
                     <button type="button" class="btn btn-gold next">Next</button>
                
-                </div>
+            </div>
+            
+            
+            <div>
+            	
+                <p><h3>What timezone are you located in?</h3></p>
+                <p>Your timezone & time available will determine league placement. </p> 
+               				
+
+                <p>	<select id="time">
+                	                   
+                   		<option value="US_PST">US - PST</option>
+                		<option value="US_MST">US - MST</option>                        
+                		<option value="US_CST">US - CST</option>
+                        <option value="US_EST">US - EST</option>
+                        
+	                </select>
+                </p> 
+                           
+				                    
+                    <button type="button" class="btn btn-gold next">Next</button>
+               
+            </div>
                 
             <div>
             
@@ -90,34 +191,26 @@
               </form>
               </div>
               
-              <p> <a class="prev browse left">PREV</a> || <a class="next browse right">NEXT</a> </p>
-                 
-			<h4>Click <a href="#" data-reveal-id="poplist" data-animation="none">HERE</a> for the current list of games with active leagues.</h4>
-            
-            	<!--Popup-->
-            		<div id="poplist" class="reveal-modal">
-                        <h1>Current PGL Games</h1>
-                            <ul style="text-align:left";>
-                                <li>League of Legends</li>
-                                <li>Dota 2</li>        
-                                <li>Counter Strike</li>
-                                <li>Call of Duty: Black Ops II</li>
-                            </ul>
-            	   		<a class="close-reveal-modal">&#215;</a>
-                     </div>
+              <p> <a class="prev browse left"> <button type="button" class="btn btn-gold" > BACK </button></a></p>
+                 <h4>Click <a href="#" data-reveal-id="poplist" data-animation="none">HERE</a> for the current list of games with active leagues.</h4>
+			
                 	
 		</section>
 
 
 	</header>
 
+
+
+
+
 	<article>
+    
 		<div class="container">
 			<ul class="row-fluid">
 				<li class="span3"> 
 					<i class="foundicon-calendar"></i>
 					<div class="box">
-						<!-- Edit your article content here -->
 						<h3>Play when you want!</h3>
 						<p>
 							 As gamers get older, the times they can play become much more restrictive. 
@@ -143,7 +236,7 @@
 						<!-- Edit your article content here -->
 						<h3>Stats</h3>
 						<p>
-							All stats, for every game are recorded and visible on league leaderboards!  All matches are reviewed for accuracy. 
+							All statistics, for every game are recorded and visible on league leaderboards!  All matches are reviewed for accuracy. Later API implementation will allow for near realtime statistics. 
 						</p>
 					</div>
 				</li>
@@ -163,30 +256,35 @@
 		</div>
 	</article>
 
+
+
 	<footer>
 		<div class="container">
 			<ul class="row-fluid">
 				<!-- Edit your footer content here -->
 				<li>
-					<a href="">About Us</a>
+					<a href="#" data-reveal-id="pop-abt" data-animation="none">About</a>
+                    
 				</li>
 				<li>
 					<a href="">Terms of Use</a>
 				</li>
 				<li>
-					<a href="">Privacy</a>
+					<a href="#" data-reveal-id="pop-priv" data-animation="none">Privacy</a>
 				</li>
 				<li>
-					<a href="">Social</a>
+					<a href="#" data-reveal-id="pop-social" data-animation="none">Social</a>
 				</li>
 				<li>
-					<a href="">Contact Us</a>
+					<a href="#" data-reveal-id="pop-contact" data-animation="none">Contact Us</a>
 				</li>
 			</ul>
 		</div>
-		<!-- Edit your copyright here -->
 		<p>Copyright © 2013 The Public Gaming League</p>
 	</footer>
+    
+    
+    
 
 	<!-- Javascript -->
 	
@@ -198,10 +296,6 @@ $(function() {
 </script>
 		</div>				
                 
-
-
-
-
 
 </body>
 </html>

@@ -109,7 +109,12 @@ nav a.brand:hover {
 /* line 52, ../sass/modules/_header.scss */
 header {
   background-color: #222222;
-  background: url("../images/bg.jpg") center no-repeat;
+  background: url("../images/bg_beta.jpg") center no-repeat;
+}
+
+header.about {
+  background-color: #222222;
+  background: url("../images/abt_bg.png") center no-repeat;
 }
 /* line 55, ../sass/modules/_header.scss */
 header section {
@@ -550,6 +555,5 @@ footer ul li a:hover {
 .foundicon-search:before {
   content: "\f02e";
 }
-
 
 
